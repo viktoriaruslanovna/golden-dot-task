@@ -1,0 +1,117 @@
+.ratepage {
+  width: 70%;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    & {
+      width: 95%;
+    }
+  }
+
+  .ratepage__prewiew {
+    margin-bottom: 30px;
+
+    & p {
+      text-align: left;
+      font-size: 22px;
+    }
+    @media screen and (max-width: 768px) {
+      & p {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+.ratelist {
+  padding: 0 20px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  .row.ratelist__header {
+    font-weight: 600;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+
+    .row__item {
+      font-size: 20px;
+      border-bottom: none;
+
+      &:hover {
+        background-color: inherit;
+      }
+
+      @media screen and (max-width: 768px) {
+        & {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    & {
+      padding: 0;
+    }
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+
+  &.dates {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &.ratelist__header.dates {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .row__wrapper {
+    .row__item {
+      position: relative;
+      width: fit-content;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      margin: auto;
+      padding: 20px;
+      font-size: 17px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+
+      &.row__charcode {
+        font-weight: 600;
+      }
+
+      .tooltip__text {
+        position: absolute;
+        z-index: 1;
+        top: 20%;
+        left: calc(100% + 5px);
+        display: none;
+        padding: 5px;
+        font-size: 15px;
+        font-weight: normal;
+        border-radius: 10px;
+        background-color: #d3d3d3;
+      }
+
+      &:hover .tooltip__text {
+        display: block;
+      }
+
+      &:hover {
+        background-color: #d3d3d3;
+      }
+
+      @media screen and (max-width: 768px) {
+        & {
+          padding: 5px;
+        }
+      }
+    }
+  }
+}

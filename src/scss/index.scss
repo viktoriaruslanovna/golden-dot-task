@@ -1,0 +1,44 @@
+body {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  background: white;
+
+  &._lock {
+    overflow: hidden;
+  }
+}
+
+h1 {
+  padding: 40px 0 20px;
+  font-size: 45px;
+}
+
+h2 {
+  padding: 20px;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    padding-top: 20px;
+    font-size: 35px;
+  }
+  h2 {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 60px;
+  background-color: #f8f8f8;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../media/fonts/Ubuntu/Ubuntu-Light.ttf') format('truetype');
+}
